@@ -25,19 +25,18 @@ function average(ages) {
 console.log(average(ages));
 
 //Question 2:
-let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob']
-console.log(names);
+let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
+//console.log(names);
 
 //Question 2A:
-//function nameAvg(name) {
-    let total = 0;//container for the sum of the character count of each element
-    for (let name = 0; name < names.length; name++) {//loops through each element from element 0 to the end of the array, going up by 1 element each time
-        total += names[name].length;//this takes the amount of characters in each element and adds them to the "total" variable
-//}
-    return total/names.length;//this takes the total and divides it by the length of the array getting the average number
+let nameContainer = 0;//container for the lengths of each element
+    
+for (let i = 0; i < names.length; i++) {//loops through the array, one element at a time
+    nameContainer += names[i].length;//adds the length of each element to the container
 }
-//console.log(nameAvg(names));
-
+    let calculated = nameContainer/names.length;//calculates the average by taking the lengths container and dividing it by the number of elements
+    console.log(calculated);
+ 
 //Question 2B:
 let nameList = "";//a container for the list of names
 for(let name of names) { //loops through each name(element) of the array "names"
@@ -62,14 +61,12 @@ for (let name = 0; name < names.length; name++) {//loops through each element in
 console.log(nameLengths);
 
 //Question 6:
-function sum(nameLengths) {//getting the sum of nameLengths array
-    let total = 0;//container for sum of nameLengths
-    for (let length = 0; length < nameLengths.length; length++) {//Loops through nameLengths
-    total += nameLengths[length];//adds the sum of nameLengths together and pushes it to the variable total
+let sumOfLengths = 0;//container for the lengths of each element
+    
+for (let length = 0; length < nameLengths.length; length++) {//Loops through nameLengths
+    sumOfLengths += nameLengths[length];//adds the length of each element to the container,adds them together
 }
-    return total
-}
-console.log(sum(nameLengths));
+    console.log(sumOfLengths);
 
 //Question 7:
 function wordMultiple(word, n) {
@@ -175,3 +172,5 @@ function passingGrade (attendance, score) {
     }
 }
     console.log (passingGrade(attendance, score)); 
+
+
