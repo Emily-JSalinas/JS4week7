@@ -26,7 +26,6 @@ console.log(average(ages));
 
 //Question 2:
 let names = ['Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob'];
-//console.log(names);
 
 //Question 2A:
 let nameContainer = 0;//container for the lengths of each element
