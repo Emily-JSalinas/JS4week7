@@ -85,17 +85,18 @@ function fullName(firstName, lastName) {//getting the full name based on input f
 console.log('John', 'Smith');
 
 //Question 9:
-let numbers = [1,7,8,15,35,30];
+let numbers = [1,17,45,5];
 
 function sum(numbers) {//gets the sum of the numbers array
+    let sumOfNums = 0;//container for the sum
     for (let i = 0; i < numbers.length; i++) {//loops through the array
-    let sumOfNums = numbers[i];//adds the sum to the variable total//returns the sum
+        sumOfNums += numbers[i];}//adds the sum to the variable sumOfNums
     if (sumOfNums>100) { //takes the sum and compares it to the value of 100
-    return true; //gives a boolean value of "true" if the sum is greater than 100
+        return true; //gives a boolean value of "true" if the sum is greater than 100
     } else { 
-    return false; //gives a boolean value of "false" if the sum is less than 100
+        return false; //gives a boolean value of "false" if the sum is less than 100
     }
-}
+
 }
 console.log(sum(numbers));
 
@@ -112,7 +113,7 @@ function numAvg(randomNum) {
 console.log(numAvg(randomNum));
 
 //Question 11:
-let listOfNumOne =[1,7,45,6,37,94];
+let listOfNumOne =[1,7,45,6,37];
 let listOfNumTwo =[5,98,4,36,2,90];
 
 function compareArr(listOfNumOne, listOfNumTwo){
@@ -144,7 +145,7 @@ function willBuyDrink (isHotOutside, moneyInPocket) {
         return false;//returns false if at least one of the conditions isn't met
    }
 }
-console.log (willBuyDrink(false, 10.51));
+console.log (willBuyDrink(true, 10));
 
 //Question 13:
 //I wanted to create a function that used multiple functions in one, so I created a function to calculate if a student has passed a class or not
