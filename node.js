@@ -139,18 +139,18 @@ console.log (compareArr(listOfNumOne, listOfNumTwo));
 
 //Question 12:
 function willBuyDrink (isHotOutside, moneyInPocket) {
-   if ((isHotOutside === true) && (moneyInPocket > 10.50)) {//if/else statement to take the two parameters and compare them to the answers necessary.
+   if ((isHotOutside === true) && (moneyInPocket > 10.5)) {//if/else statement to take the two parameters and compare them to the answers necessary.
         return true;//returns true if it is hot outside and there is more than $10.50 in the pocket
    } else {
         return false;//returns false if at least one of the conditions isn't met
    }
 }
-console.log (willBuyDrink(true, 10));
+console.log (willBuyDrink(false, 10.40));
 
 //Question 13:
-//I wanted to create a function that used multiple functions in one, so I created a function to calculate if a student has passed a class or not
+//I wanted to create a function that used multiple loops in one, so I created a function to calculate if a student has passed a class or not
 let attendance = [1,1,0,1,1,1,0,1,1,1]; //1pt per day present out of 10 days
-let score = [90,74,60,95,63,70,80,50,45,95];//scores of the 10 assignments
+let score = [90,74,60,95,63,70,0,50,45,0];//scores of the 10 assignments
 
 function passingGrade (attendance, score) {
     let totalAtt = 0;//container for the attendance sum
