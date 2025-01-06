@@ -91,12 +91,7 @@ function sum(numbers) {//gets the sum of the numbers array
     let sumOfNums = 0;//container for the sum
     for (let i = 0; i < numbers.length; i++) {//loops through the array
         sumOfNums += numbers[i];}//adds the sum to the variable sumOfNums
-    if (sumOfNums>100) { //takes the sum and compares it to the value of 100
-        return true; //gives a boolean value of "true" if the sum is greater than 100
-    } else { 
-        return false; //gives a boolean value of "false" if the sum is less than 100
-    }
-
+    return (sumOfNums>100) //takes the sum and compares it to the value of 100
 }
 console.log(sum(numbers));
 
@@ -113,7 +108,7 @@ function numAvg(randomNum) {
 console.log(numAvg(randomNum));
 
 //Question 11:
-let listOfNumOne =[1,7,45,6,37];
+let listOfNumOne =[1,7,45,6,370];
 let listOfNumTwo =[5,98,4,36,2,90];
 
 function compareArr(listOfNumOne, listOfNumTwo){
@@ -128,24 +123,15 @@ function compareArr(listOfNumOne, listOfNumTwo){
 }
     let twoAvg = totalTwo/numbers.length;//variable created to use later in function to compare two averages
 
-    if (oneAvg>twoAvg) {//if/else statement to compare the averages, returning true if the first average is greater than the second average. It returns false otherwise
-        return true;
-    }
-    else {
-        return false;
-    }
+    return (oneAvg>twoAvg)//if/else statement to compare the averages, returning true if the first average is greater than the second average. It returns false otherwise
 }
 console.log (compareArr(listOfNumOne, listOfNumTwo));
 
 //Question 12:
 function willBuyDrink (isHotOutside, moneyInPocket) {
-   if ((isHotOutside === true) && (moneyInPocket > 10.5)) {//if/else statement to take the two parameters and compare them to the answers necessary.
-        return true;//returns true if it is hot outside and there is more than $10.50 in the pocket
-   } else {
-        return false;//returns false if at least one of the conditions isn't met
-   }
+   return ((isHotOutside === true) && (moneyInPocket > 10.5))//if/else statement to take the two parameters and compare them to the answers necessary.
 }
-console.log (willBuyDrink(false, 10.40));
+console.log (willBuyDrink(true, 10.51));
 
 //Question 13:
 //I wanted to create a function that used multiple loops in one, so I created a function to calculate if a student has passed a class or not
@@ -171,6 +157,4 @@ function passingGrade (attendance, score) {
         return "I'm sorry. You did not pass. Try again next semester!";//student fails if at least one of these conditions is not met
     }
 }
-    console.log (passingGrade(attendance, score)); 
-
-
+    console.log (passingGrade(attendance, score));
