@@ -82,7 +82,7 @@ function fullName(firstName, lastName) {//getting the full name based on input f
     let firstLast = `${firstName} ${lastName}`;//variable that combines the first name and last name
     return firstLast//returns the first and last name
 }
-console.log('John', 'Smith');
+console.log(fullName('John', 'Smith'));
 
 //Question 9:
 let numbers = [1,17,45,5];
@@ -116,12 +116,12 @@ function compareArr(listOfNumOne, listOfNumTwo){
     for (let i = 0; i < listOfNumOne.length; i++) {//loops through the first array
         totalOne += listOfNumOne[i];//adds the sum of the listOfNumOne to the first container
 }
-    let oneAvg = totalOne/numbers.length;//variable created to use later in function to compare two averages
+    let oneAvg = totalOne/listOfNumOne.length;//variable created to use later in function to compare two averages
     let totalTwo = 0;//container for the second sum of numbers
     for (let i = 0; i < listOfNumTwo.length; i++) {//loops through second array
         totalTwo += listOfNumTwo[i];//adds the sum of the listOfNumTwo to the second container
 }
-    let twoAvg = totalTwo/numbers.length;//variable created to use later in function to compare two averages
+    let twoAvg = totalTwo/listOfNumTwo.length;//variable created to use later in function to compare two averages
 
     return (oneAvg>twoAvg)//if/else statement to compare the averages, returning true if the first average is greater than the second average. It returns false otherwise
 }
